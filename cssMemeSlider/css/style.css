@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    background: #000;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wrapper {
+    width: 600px;
+    overflow: hidden;
+}
+
+.slides-box {
+    width: 500%;
+    display: flex;
+}
+
+.slide {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+input[name="btn"] {
+    display: none;
+}
+
+input[name="text"] {
+    display: none;
+}
+
+.slider-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation {
+    display: flex;
+}
+
+.bar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    border: 3px solid white;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.bar:hover {
+    background-color: white;
+}
+
+
+
+.slides-text {
+    width: 500%;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide-text {
+    width: 20%;
+    display: flex;
+}
+
+p {
+    width: 100%;
+    color: white;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s2 {
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s3 {
+    margin-left: -40%;
+}
+
+#r4:checked ~ .s4 {
+    margin-left: -60%;
+}
+
+#r5:checked ~ .s5 {
+    margin-left: -80%;
+}
+
+#btn1:checked ~ .t1 {
+    margin-left: 0;
+}
+
+#btn:checked ~ .t2 {
+    margin-left: -20%;
+}
