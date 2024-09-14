@@ -10,10 +10,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .slider-wrapper {
-    width: 600px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -30,22 +31,24 @@
     justify-content: center;
 }
 
-.img {
+img {
     width: 100%;
     height: 100%;
+    border-radius: 50px;
+}
+
+.img-container {
+    border-radius: 100px;
 }
 
 input[name="btn"] {
     display: none;
 }
 
-input[name="text"] {
-    display: none;
-}
-
 .slider-footer {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 .navigation {
@@ -53,34 +56,28 @@ input[name="text"] {
 }
 
 .bar {
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 100px;
     border: 3px solid white;
     margin-right: 0.5rem;
     cursor: pointer;
 }
 
+.bar:checked {
+    background: white;
+}
+
 .bar:hover {
-    background-color: white;
-}
-
-
-
-.slides-text {
-    width: 500%;
-    display: flex;
-    overflow: hidden;
-}
-
-.slide-text {
-    width: 20%;
-    display: flex;
+    background: white;
 }
 
 p {
     width: 100%;
+    height: 100%;
     color: white;
+    font-size: 2rem;
+    text-align: left;
 }
 
 #r1:checked ~ .s1 {
@@ -101,12 +98,4 @@ p {
 
 #r5:checked ~ .s5 {
     margin-left: -80%;
-}
-
-#btn1:checked ~ .t1 {
-    margin-left: 0;
-}
-
-#btn:checked ~ .t2 {
-    margin-left: -20%;
 }
