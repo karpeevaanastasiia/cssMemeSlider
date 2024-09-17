@@ -29,6 +29,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s;
 }
 
 img {
@@ -41,10 +42,13 @@ img {
     border-radius: 100px;
 }
 
-input[name="btn"] {
-    display: none;
+input[type="radio"] {
+    visibility: hidden;
 }
 
+#r1:checked ~ .wrapper .slider-wrapper .slider-footer .navigation .active1 .button {
+    background: white;
+}
 .slider-footer {
     width: 100%;
     display: flex;
@@ -58,18 +62,21 @@ input[name="btn"] {
 .bar {
     width: 1rem;
     height: 1rem;
-    border-radius: 100px;
+    border-radius: 50%;
     border: 3px solid white;
     margin-right: 0.5rem;
     cursor: pointer;
 }
 
-.bar:checked {
+.bar:hover {
     background: white;
 }
 
-.bar:hover {
-    background: white;
+.button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background: transparent;
 }
 
 p {
